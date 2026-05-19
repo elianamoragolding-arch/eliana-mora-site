@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   ELIANA MORA — DESIGN SYSTEM
+   xAI-inspired dark / monospace / brutalist minimalism.
+   Pure white on warm-near-black. No accents (except focus ring).
+   Fonts: Geist Mono (display + buttons), Geist (body).
+   ============================================================ */
+
+:root {
+  /* Color: structural */
+  --bg:               #1f2228;
+  --bg-elev:          #25282f;
+
+  /* Color: foreground */
+  --fg:               #ffffff;
+  --fg-2:             rgba(255,255,255,0.7);
+  --fg-3:             rgba(255,255,255,0.5);
+  --fg-4:             rgba(255,255,255,0.3);
+
+  /* Color: surfaces */
+  --surface-1:        rgba(255,255,255,0.03);
+  --surface-2:        rgba(255,255,255,0.05);
+  --surface-3:        rgba(255,255,255,0.08);
+
+  /* Color: borders */
+  --border:           rgba(255,255,255,0.10);
+  --border-strong:    rgba(255,255,255,0.20);
+
+  /* Color: focus */
+  --focus-ring:       rgba(59,130,246,0.5);
+
+  /* Type: scale */
+  --t-display:        clamp(2.5rem, 8vw, 8rem);
+  --t-h1:             3rem;
+  --t-h2:             1.875rem;
+  --t-h3:             1.25rem;
+  --t-body:           1rem;
+  --t-label:          0.875rem;
+  --t-meta:           0.75rem;
+
+  /* Type: weights */
+  --w-light:          300;
+  --w-regular:        400;
+  --w-medium:         500;
+
+  /* Type: line heights */
+  --lh-tight:         1.20;
+  --lh-body:          1.50;
+  --lh-snug:          1.43;
+
+  /* Type: letter-spacing */
+  --ls-button:        0.0875em;
+  --ls-tag:           0.083em;
+
+  /* Spacing */
+  --s-1:              4px;
+  --s-2:              8px;
+  --s-3:              24px;
+  --s-4:              48px;
+  --s-5:              96px;
+
+  /* Radius — zero everywhere */
+  --r-0:              0;
+  --r-1:              4px;
+
+  /* Borders */
+  --bd:               1px solid var(--border);
+  --bd-strong:        1px solid var(--border-strong);
+
+  /* Motion */
+  --dur-fast:         120ms;
+  --dur-base:         200ms;
+  --dur-slow:         400ms;
+  --ease:             cubic-bezier(0.2, 0.6, 0.2, 1);
+
+  /* Layout */
+  --container:        1400px;
+  --section-y:        72px;
+}
+
+/* Base */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-size: var(--t-body);
+  line-height: var(--lh-body);
+  font-weight: var(--w-regular);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+a {
+  color: var(--fg);
+  text-decoration: none;
+  transition: color var(--dur-base) var(--ease);
+  cursor: pointer;
+}
+
+a:hover { color: var(--fg-3); }
+
+a:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+/* Underline style for inline links in body copy */
+p a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(255,255,255,0.3);
+}
+
+/* Scrollbar — subtle dark */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.25); }
