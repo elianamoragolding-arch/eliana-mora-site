@@ -140,3 +140,81 @@ p a {
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.25); }
+
+/* ============================================================
+   RESPONSIVE — mobile-first overrides
+   All !important used deliberately to override inline styles
+   ============================================================ */
+
+/* --- Tablet (≤ 1024px) ------------------------------------ */
+@media (max-width: 1024px) {
+  .r-section  { padding: 56px 24px !important; }
+  .r-hero     { padding: 56px 24px 72px !important; }
+}
+
+/* --- Mobile (≤ 768px) ------------------------------------- */
+@media (max-width: 768px) {
+  /* Nav */
+  .r-nav      { padding: 16px 20px !important; }
+  .nav-links  { display: none !important; }
+
+  /* Sections */
+  .r-section  { padding: 40px 20px !important; }
+  .r-hero     { padding: 40px 20px 56px !important; }
+
+  /* 2-column → 1-column grids */
+  .r-grid-2   { grid-template-columns: 1fr !important; }
+
+  /* Experience about-header gap */
+  .r-about-header {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    margin-bottom: 32px !important;
+  }
+
+  /* Experience row: date col + content col → stacked */
+  .r-exp-row {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  /* Stack / certs */
+  .r-stack-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    margin-top: 32px !important;
+  }
+
+  /* Contact info grid */
+  .r-contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  /* Footer */
+  .r-footer {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  /* MetricGrid: 4 cols → 2 cols */
+  .r-metrics { grid-template-columns: repeat(2, 1fr) !important; }
+  /* Remove right border on right-column items */
+  .r-metrics .metric-item:nth-child(2n)     { border-right: none !important; }
+  /* Add top border to second row */
+  .r-metrics .metric-item:nth-child(n+3)    { border-top: 1px solid rgba(255,255,255,0.1); }
+
+  /* MetricGrid smaller padding on mobile */
+  .metric-item { padding: 24px 16px !important; }
+
+  /* Case-study card section padding */
+  .r-container { padding: 0 20px !important; }
+}
+
+/* --- Small mobile (≤ 480px) ------------------------------- */
+@media (max-width: 480px) {
+  .r-nav  { padding: 14px 16px !important; }
+  .r-section { padding: 32px 16px !important; }
+  .r-hero { padding: 32px 16px 48px !important; }
+  .r-container { padding: 0 16px !important; }
+}

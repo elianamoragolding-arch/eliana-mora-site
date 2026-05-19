@@ -35,12 +35,12 @@ export default function HomePage() {
 
       <Hero onScrollToWork={scrollToWork} />
 
-      <div style={{ maxWidth: 1400, margin: '0 auto', padding: '0 32px' }}>
+      <div className="r-container" style={{ maxWidth: 1400, margin: '0 auto', padding: '0 32px' }}>
         <MetricGrid items={[...METRICS]} />
       </div>
 
       <Section id="work" tag="selected campaigns · 2022 — 2026">
-        <div style={{
+        <div className="r-grid-2" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(2, 1fr)',
           gap: 16,
@@ -52,7 +52,7 @@ export default function HomePage() {
       </Section>
 
       <Section id="about" tag="experience">
-        <div style={{
+        <div className="r-about-header" style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
           gap: 64,
@@ -85,7 +85,7 @@ export default function HomePage() {
 
         <ExperienceList />
 
-        <div style={{ marginTop: 48, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32 }}>
+        <div className="r-stack-grid" style={{ marginTop: 48, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32 }}>
           <div>
             <Bracket style={{ color: 'rgba(255,255,255,0.5)' }}>stack</Bracket>
             <div style={{ marginTop: 16, display: 'flex', flexWrap: 'wrap', gap: 6 }}>

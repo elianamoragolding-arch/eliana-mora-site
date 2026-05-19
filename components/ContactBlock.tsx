@@ -22,7 +22,7 @@ export default function ContactBlock() {
         Let&apos;s Ship<br />Something.
       </h2>
 
-      <div style={{
+      <div className="r-contact-grid" style={{
         marginTop: 40,
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',

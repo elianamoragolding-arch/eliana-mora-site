@@ -6,6 +6,7 @@ export default function ExperienceList() {
       {EXPERIENCE.map((row, i) => (
         <div
           key={i}
+          className="r-exp-row"
           style={{
             display: 'grid',
             gridTemplateColumns: '200px 1fr',

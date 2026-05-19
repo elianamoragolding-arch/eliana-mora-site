@@ -9,7 +9,7 @@ interface HeroProps {
 
 export default function Hero({ onScrollToWork }: HeroProps) {
   return (
-    <section style={{ padding: '80px 32px 96px', maxWidth: 1400, margin: '0 auto' }}>
+    <section className="r-hero" style={{ padding: '80px 32px 96px', maxWidth: 1400, margin: '0 auto' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 32 }}>
         <Bracket>senior pm · marketing ops · ai-forward delivery</Bracket>
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'rgba(255,255,255,0.3)' }}>·</span>

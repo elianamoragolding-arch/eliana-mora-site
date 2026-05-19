@@ -32,7 +32,7 @@ export default function NavBar() {
   } as const)
 
   return (
-    <nav style={{
+    <nav className="r-nav" style={{
       width: '100%',
       padding: '20px 32px',
       display: 'flex',
@@ -59,7 +59,7 @@ export default function NavBar() {
           eliana mora
         </button>
 
-        <div style={{ display: 'flex', gap: 28 }}>
+        <div className="nav-links" style={{ display: 'flex', gap: 28 }}>
           <button onClick={() => handleNav('work')} style={linkStyle(isHome)}>
             work
           </button>
