@@ -24,7 +24,7 @@ export default function Hero({ onScrollToWork }: HeroProps) {
         letterSpacing: '-0.025em',
         margin: 0,
       }}>
-        I ship<br />things.
+        Delivery with<br />Creativity.
       </h1>
 
       <div style={{ marginTop: 40, maxWidth: 640, display: 'flex', flexDirection: 'column', gap: 24 }}>
