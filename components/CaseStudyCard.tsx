@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import Card from './ui/Card'
 import Bracket from './ui/Bracket'
@@ -15,30 +16,50 @@ export default function CaseStudyCard({ cs }: CaseStudyCardProps) {
   const router = useRouter()
 
   return (
-    <Card onClick={() => router.push(`/work/${cs.id}`)} padding={28}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
-        <Bracket>{cs.year} — {cs.client}</Bracket>
-        <span style={{ color: 'rgba(255,255,255,0.3)' }}>
-          <ArrowUpRight size={16} />
-        </span>
-      </div>
+    <Card onClick={() => router.push(`/work/${cs.id}`)} padding={0}>
+      {cs.image && (
+        <div style={{
+          position: 'relative',
+          width: '100%',
+          aspectRatio: '16/9',
+          overflow: 'hidden',
+          borderRadius: '4px 4px 0 0',
+        }}>
+          <Image
+            src={cs.image}
+            alt={cs.title}
+            fill
+            style={{ objectFit: 'cover' }}
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </div>
+      )}
 
-      <div style={{ fontFamily: 'var(--font-sans)', fontSize: 22, lineHeight: 1.3, color: '#fff' }}>
-        {cs.title}
-      </div>
+      <div style={{ padding: 28 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
+          <Bracket>{cs.year} — {cs.client}</Bracket>
+          <span style={{ color: 'rgba(255,255,255,0.3)' }}>
+            <ArrowUpRight size={16} />
+          </span>
+        </div>
 
-      <p style={{
-        margin: '12px 0 18px',
-        fontFamily: 'var(--font-sans)',
-        fontSize: 14,
-        lineHeight: 1.55,
-        color: 'rgba(255,255,255,0.7)',
-      }}>
-        {cs.blurb}
-      </p>
+        <div style={{ fontFamily: 'var(--font-sans)', fontSize: 22, lineHeight: 1.3, color: '#fff' }}>
+          {cs.title}
+        </div>
 
-      <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-        {cs.metrics.map((m, i) => <Tag key={i}>{m}</Tag>)}
+        <p style={{
+          margin: '12px 0 18px',
+          fontFamily: 'var(--font-sans)',
+          fontSize: 14,
+          lineHeight: 1.55,
+          color: 'rgba(255,255,255,0.7)',
+        }}>
+          {cs.blurb}
+        </p>
+
+        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+          {cs.metrics.map((m, i) => <Tag key={i}>{m}</Tag>)}
+        </div>
       </div>
     </Card>
   )

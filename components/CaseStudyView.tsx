@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import Bracket from './ui/Bracket'
 import Button from './ui/Button'
@@ -76,6 +77,27 @@ export default function CaseStudyView({ id }: CaseStudyViewProps) {
       }}>
         {cs.intro}
       </p>
+
+      {meta.image && (
+        <div style={{
+          position: 'relative',
+          width: '100%',
+          aspectRatio: '16/9',
+          marginTop: 48,
+          borderRadius: 4,
+          overflow: 'hidden',
+          border: '1px solid rgba(255,255,255,0.08)',
+        }}>
+          <Image
+            src={meta.image}
+            alt={cs.title}
+            fill
+            style={{ objectFit: 'cover' }}
+            sizes="(max-width: 768px) 100vw, 1200px"
+            priority
+          />
+        </div>
+      )}
 
       <div style={{ marginTop: 48 }}>
         <MetricGrid items={cs.metrics} />

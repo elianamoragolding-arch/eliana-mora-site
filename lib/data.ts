@@ -14,6 +14,7 @@ export interface CaseStudy {
   title: string
   blurb: string
   metrics: string[]
+  image?: string
 }
 
 export const CASE_STUDIES: CaseStudy[] = [
@@ -24,6 +25,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     title: 'House of the Dragon · Profile Analyzer',
     blurb: 'interactive social campaign assigning users a house targaryen dragon-rider via personality analysis. raven-messenger automated responses. latam + brazil.',
     metrics: ['110K opt-ins MX', '105K opt-ins BR', '$0.56 cost per opt-in', '585K mentions'],
+    image: '/images/campaigns/hbo.jpg',
   },
   {
     id: 'vix',
@@ -32,6 +34,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     title: 'De Viaje Con Los Derbez · Custom Content + Tech',
     blurb: '7 image variations × 7 copy variations, served by user interaction. notifications delivered show content + trailers. shipped in 3 weeks.',
     metrics: ['18.2M reach', '$0.77 cpe', '75K clicks', '0.57% engagement'],
+    image: '/images/campaigns/vix.jpg',
   },
   {
     id: 'pepsico',
@@ -40,6 +43,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     title: 'Mixes · Polls to OOH',
     blurb: 'music + snack polls on x, results piped to digital out-of-home billboards every 4 hours. assisted on tech and OOH template design.',
     metrics: ['141.4M impressions', '270K poll votes', '$0.20 cpe', '$172K spend'],
+    image: '/images/campaigns/pepsico.jpg',
   },
   {
     id: 'playdoit',
@@ -48,6 +52,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     title: 'Groknalyzer · AI Profile Analyzer',
     blurb: 'users like a post; grok analyzes their sports / betting preferences and replies with personalized brand differentiators. one-to-one at scale.',
     metrics: ['grok-powered', 'personalized', 'automated'],
+    image: '/images/campaigns/playdoit.jpg',
   },
   {
     id: 'lionsgate',
@@ -56,6 +61,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     title: 'Michael Jackson Microsite · Profile Hack',
     blurb: 'verified x profile appears compromised. sponsored teaser drives users to a microsite mimicking a hacked profile, looping a tribute video → fandango ticket purchase.',
     metrics: ['microsite', 'video → cta → fandango', 'frictionless funnel'],
+    image: '/images/campaigns/lionsgate.jpg',
   },
   {
     id: 'trend-matcher',
@@ -64,6 +70,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     title: 'Trend Matcher · Real-Time Ad Optimization',
     blurb: "x's ads api selects best-performing copy/media from pre-defined pools, deploys into live trending conversations. auto-pauses during low velocity.",
     metrics: ['+15% engagement rate', '5x more replies', '2x more reposts'],
+    image: '/images/campaigns/trend-matcher.jpg',
   },
 ]
 
