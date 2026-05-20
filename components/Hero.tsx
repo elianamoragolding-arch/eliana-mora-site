@@ -19,7 +19,7 @@ export default function Hero({ onScrollToWork }: HeroProps) {
       <h1 style={{
         fontFamily: 'var(--font-mono)',
         fontWeight: 300,
-        fontSize: 'clamp(56px, 13vw, 220px)',
+        fontSize: 'clamp(54px, 12.7vw, 218px)',
         lineHeight: 0.95,
         letterSpacing: '-0.025em',
         margin: 0,
